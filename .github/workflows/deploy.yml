@@ -29,16 +29,13 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
       - name: Build
-        run: npm run build -- --base-href=/rest-countries/ --output-path=./dist/rest-countries
+        run: npm run build -- --base-href=/rest-countries/ --output-path=./dist/rest-countries/browser
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/rest-countries
-
-  deploy:
+          path: ./dist/rest-countries/browser  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
