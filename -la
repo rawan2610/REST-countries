@@ -1,0 +1,12 @@
+[1mdiff --git a/src/index.html b/src/index.html[m
+[1mindex 90f0549..d14d57d 100644[m
+[1m--- a/src/index.html[m
+[1m+++ b/src/index.html[m
+[36m@@ -10,6 +10,6 @@[m
+ <body>[m
+   <app-root></app-root>[m
+   <p>hi rawan</p>[m
+[31m-  <p>testing if this works live or not</p>[m
+[32m+[m[32m  <p>final repo setup</p>[m
+ </body>[m
+ </html>[m
