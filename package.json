@@ -39,7 +39,7 @@
     "@angular/cli": "^21.0.1",
     "@angular/compiler-cli": "^21.0.0",
     "angular-eslint": "21.2.0",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9.39.2",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.6",
