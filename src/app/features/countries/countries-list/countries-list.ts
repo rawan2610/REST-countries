@@ -20,8 +20,8 @@ export class CountriesList implements OnInit, OnDestroy {
   private countriesApi: CountriesApiService = inject(CountriesApiService);
 
   countries = signal<Country[]>([]);
-  dataLoading = signal(true);
-  error = signal('');
+  dataLoading = signal(true); //->loading state
+  error = signal('');//-> error state
   private subscriptions = new Subscription();
 
   private toastr: ToastrService = inject(ToastrService);

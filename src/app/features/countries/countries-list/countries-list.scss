@@ -1,0 +1,52 @@
+.countries-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  
+  /* Mobile: 1 column (up to 375px) */
+  grid-template-columns: 1fr;
+  
+  /* Tablet: 2 columns (from 376px to 768px) */
+  @media (min-width: 376px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Desktop: 4 columns (1024px and above) */
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+.country-card {
+  background: var(--card-bg);  /* ← Use variable instead of hardcoded white */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  img.flag {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+    color: var(--text-color);  /* ← Use variable */
+    
+    h3 {
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      font-size: 16px;
+    }
+    
+    p {
+      font-weight: 300;
+      margin: 0.5rem 0;
+      
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
