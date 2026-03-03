@@ -40,7 +40,7 @@ export class CountriesList implements OnInit, OnDestroy {
         console.log('Countries loaded:', data);
       },
       error: (err) => {
-        this.error.set('Failed to load countries. Please try again later.');
+        this.error.set('Failed to load countries. Please try again later.'); //constant error on screen
         this.dataLoading.set(false);
         console.error('Error details:', err);
       },
@@ -50,20 +50,6 @@ export class CountriesList implements OnInit, OnDestroy {
     this.subscriptions.add(countriesSubscription);
   }
 
-  // Example of adding another subscription later (for search, filter, etc.)
-  // private fetchCountriesByRegion(region: string) {
-  //   const regionSubscription = this.countriesApi.getByRegion(region).subscribe({
-  //     next: (data) => {
-  //       this.countries.set(data);
-  //       this.dataLoading.set(false);
-  //     },
-  //     error: (err) => {
-  //       this.error.set('Failed to load countries by region');
-  //       this.dataLoading.set(false);
-  //     },
-  //   });
-  //   this.subscriptions.add(regionSubscription);
-  // }
 
   ngOnDestroy() {
     // This unsubscribes from ALL subscriptions in the collection at once
