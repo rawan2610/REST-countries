@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'countries',
-    loadChildren: () => import('./features/countries/countries-module')
-      .then(m => m.CountriesModule)
+    loadComponent: () => import('./features/countries/countries-list/countries-list')
+    .then(c => c.CountriesList)
   },
   {
     path: '',

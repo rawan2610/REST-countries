@@ -32,7 +32,9 @@
                 "output": "/"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss",
+          "node_modules/@iqx-limited/ngx-toastr/toastr.css" 
+        ],
             "stylePreprocessorOptions": {
               "includePaths": ["src"]
             }
