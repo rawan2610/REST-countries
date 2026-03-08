@@ -13,4 +13,5 @@ export class App {
   protected readonly title = signal('rest-countries');
  
   protected loadingService = inject(LoadingService);
+
 }

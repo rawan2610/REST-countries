@@ -7,6 +7,7 @@ export interface Country {
 }
 
 export interface CountryName {
+  toLowerCase(): unknown;
   common: string;
   official: string;
 }

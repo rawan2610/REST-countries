@@ -25,10 +25,14 @@
 } -->
 
 
+<!-- Search Component - Add this ABOVE your grid -->
+<div class="p-8 pb-0 max-w-7xl lg:mx-auto w-full">
+  <app-search (searchTerm)="onSearchInput($event)" />
+
 <!-- Parent loops through data -->
 @if (countries().length) {
   <div class="grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-4 lg:max-w-7xl lg:mx-auto">
-     @for (country of countries(); track country.name.common) { 
+     @for (country of filteredCountries(); track country.name.common) { 
       <!-- For each country in the array, the parent creates a new child component and passes ONE country to it. -->
       <!--app-country-card is the child component , ely bwdelo eahc country-->
       <!-- Parent passes data DOWN to child -->

@@ -7,7 +7,6 @@ import { DecimalPipe } from '@angular/common';
   standalone:true,
   imports: [DecimalPipe],
   templateUrl: './country-card.html',
-  styleUrl: './country-card.scss',
 })
 export class CountryCard {
 //Think of this as creating a door where parent components can pass in a country
