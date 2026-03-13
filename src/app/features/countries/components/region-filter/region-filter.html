@@ -1,0 +1,9 @@
+<!--A FormControl is an Angular class that tracks the value and validation status of a form input.-->
+<!-- Instead of: (input)="onInput($event)" and [value]="searchTerm()"
+You do: [formControl]="searchControl" and Angular handles everything! -->
+<select [formControl]="regionControl" class="w-full px-4 py-2 border rounded-lg shadow bg-white dark:bg-slate-800 dark:text-white">
+  <option value="">Filter by Region</option>
+  @for (region of regions; track region) {
+    <option [value]="region">{{ region }}</option>
+  }
+</select>

@@ -1,0 +1,26 @@
+<div
+  class="country-card h-full flex flex-col bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden transition-colors"
+>
+  <img [src]="country().flags.png" [alt]="country().name.common" class="flag w-full h-[10rem]" />
+
+  <div class="card-content p-4 flex-grow">
+    <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+      {{ country().name.common }}
+    </h3>
+
+    <p class="text-gray-700 dark:text-gray-300">
+      <span class="font-semibold text-gray-900 dark:text-white">Population:</span>
+      {{ country().population | number }}
+    </p>
+
+    <p class="text-gray-700 dark:text-gray-300">
+      <span class="font-semibold text-gray-900 dark:text-white">Region:</span>
+      {{ country().region }}
+    </p>
+
+    <p class="text-gray-700 dark:text-gray-300">
+      <span class="font-semibold text-gray-900 dark:text-white">Capital:</span>
+      {{ (country().capital && country().capital[0]) || 'N/A' }}
+    </p>
+  </div>
+</div>
